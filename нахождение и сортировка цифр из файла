@@ -1,0 +1,9 @@
+with open('input.txt', 'r') as file:
+    data = file.read()
+
+numbers = ''.join([c for c in data if c.isdigit()])
+
+sorted_numbers = sorted([int(num) for num in set(numbers)])
+
+with open('output.txt', 'w') as file:
+    file.write('\n'.join(map(str, sorted_numbers)))
